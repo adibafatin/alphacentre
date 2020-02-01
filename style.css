@@ -1,0 +1,153 @@
+body {
+	margin: 0px;
+	padding: 0;
+	font-family: Century Gothic;
+}
+
+header {
+	background-image: /*linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),*/ url(1.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+.wrapper > div{ /*do this first*/
+	/*background: #eee;*/
+	padding: 1em;
+
+}
+
+/*.wrapper >div:nth-child(odd) { do this second
+	background: #ddd;
+}*/
+
+.wrapper { /*We now working on the grid*/
+	display: grid;
+	/*grid-template-columns: 70% 30%;*/
+	grid-template-columns: 2fr 2fr ; /*Fraction function*/
+
+	/*grid-column-gap: 1em;
+	grid-row-gap: 1em; <this is for diff column n row gap function*/
+	grid-gap: 1em;
+	grid-auto-rows: minmax (80px, auto);
+}
+
+.logo img {
+	float: left;
+	width: 150px;
+	height: auto; 
+}
+
+.nav { /*grid inside grid*/
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /*use for similar column size*/
+	grid-auto-rows: 35px;
+	grid-gap: 1em;
+}
+
+.nav li {
+	border: #333 1px solid;
+	padding: 0.3em;
+	list-style-type: none; /*to delete bullet point*/
+	text-align: center;
+}
+
+ul li a {
+	text-decoration: none;
+	color: black;
+	transition: 0.6s ease;
+}
+
+ul li:hover{
+	background-color: black;
+}
+
+ul li a:hover{
+	color: white
+}
+
+ul li.active{
+	background-color: black;
+}
+
+ul li.active a{
+	color: white;
+}
+.main {
+	display: grid;
+	grid-template-columns: 1fr ; 
+	grid-gap: 1em;
+	grid-auto-rows: minmax (80px, auto);
+}
+.main > div {
+	text-align: center;
+}
+
+.title {
+	font-size: 30px;
+	
+}
+
+.events {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /*use for similar column size*/
+	grid-auto-rows: 245px;
+	grid-gap: 1em;
+	margin-right: 20px;
+	margin-left: 20px;
+
+}
+
+.events > div {
+	text-align: center;
+	background-color: rgb(0,0,0, 0.75);
+	padding: 0.7em;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 15px 50px;
+}
+
+.events > div h1  {
+	text-decoration: none;
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.events > div h6  {
+	color: 	#E0E0E0;
+	margin: 10px;
+	font-weight: lighter;	
+}
+
+.events > div h4  {
+	color: 	#E0E0E0;
+	margin-top: 25px;
+	margin-bottom: -15px;
+}
+
+.events > div h5  {
+	background: #E8E8E8;
+	color: black;
+	margin-top: 50px;
+	padding: 0.5em;
+	margin: 50px 60px;
+	font-size: 18px;
+	font-weight: lighter;	
+	text-transform: uppercase;
+	
+}
+
+.confirm a {
+	text-decoration: none;
+	color: black;
+}
+.confirm:hover {
+	background: #32CD32;
+	color: white;
+}
+.confirm a:hover {
+	color: white;
+}
+
+
