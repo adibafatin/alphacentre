@@ -1,17 +1,5 @@
-# alphacentre
-Academic Workshop 
+Follow my twitter for progress update / coding journey. 
 
-### Day 1: January 31, 2020 
-#####
-
-**Today's Progress**: Working on Alpha Centre Homepage
-
-**Thoughts**: 
-- Logo
-- Name
-- Header
-- Homepage
-
-**Link(s) to work**:
+@dba_coding
 
 
