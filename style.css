@@ -2,6 +2,7 @@ body {
 	margin: 0px;
 	padding: 0;
 	font-family: Century Gothic;
+	
 }
 
 header {
@@ -24,8 +25,7 @@ header {
 .wrapper { /*We now working on the grid*/
 	display: grid;
 	/*grid-template-columns: 70% 30%;*/
-	grid-template-columns: 2fr 2fr ; /*Fraction function*/
-
+	grid-template-columns: 1fr 1.35fr ; /*Fraction function*/
 	/*grid-column-gap: 1em;
 	grid-row-gap: 1em; <this is for diff column n row gap function*/
 	grid-gap: 1em;
@@ -36,13 +36,16 @@ header {
 	float: left;
 	width: 150px;
 	height: auto; 
+	position: fixed;
 }
+
 
 .nav { /*grid inside grid*/
 	display: grid;
 	grid-template-columns: repeat(4, 1fr); /*use for similar column size*/
-	grid-auto-rows: 35px;
+	grid-auto-rows: minmax(35px, auto);
 	grid-gap: 1em;
+	position: fixed;
 }
 
 .nav li {
@@ -54,12 +57,16 @@ header {
 
 ul li a {
 	text-decoration: none;
+	font-size: 18px;
 	color: black;
 	transition: 0.6s ease;
+	text-transform: uppercase;
+	letter-spacing: 6PX;
 }
 
 ul li:hover{
 	background-color: black;
+	opacity: 0.7;
 }
 
 ul li a:hover{
@@ -73,38 +80,69 @@ ul li.active{
 ul li.active a{
 	color: white;
 }
+
+.home {
+	margin-top: 160px;
+	padding-top: 5px;
+	width:100%;
+	height: 40vh;
+	background-color: rgb(0,0,0, 0.5);
+
+}
+
+.home h1 {
+	text-align: center;
+	color: white;
+	font-size: 60px;
+	letter-spacing: 6px;
+}
+
+
+.home h2 {
+	text-align: center;
+	color: white;
+	font-size: 30px;
+	letter-spacing: 6px;
+}
+
 .main {
 	display: grid;
 	grid-template-columns: 1fr ; 
 	grid-gap: 1em;
 	grid-auto-rows: minmax (80px, auto);
+	height: 100vh;
+	background-color: #f0f1f2;
 }
 .main > div {
 	text-align: center;
 }
 
 .title {
+	margin-top: 120px;
+	margin-bottom: -120px;
 	font-size: 30px;
-	
+	letter-spacing: 6PX;
 }
 
 .events {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr); /*use for similar column size*/
-	grid-auto-rows: 245px;
+	grid-auto-rows: 280px;
 	grid-gap: 1em;
 	margin-right: 20px;
 	margin-left: 20px;
+	margin-bottom: 20px;
 
 }
 
 .events > div {
 	text-align: center;
-	background-color: rgb(0,0,0, 0.75);
+	background-color: rgb(0,0,0, 0.9);
 	padding: 0.7em;
 	padding-left: 30px;
 	padding-right: 30px;
 	border-radius: 15px 50px;
+	box-shadow: 3px 8px 12px #888888;
 }
 
 .events > div h1  {
@@ -112,6 +150,7 @@ ul li.active a{
 	color: white;
 	font-size: 30px;
 	font-weight: bold;
+	letter-spacing: 6px;
 }
 
 .events > div h6  {
@@ -127,7 +166,7 @@ ul li.active a{
 }
 
 .events > div h5  {
-	background: #E8E8E8;
+	background: white;
 	color: black;
 	margin-top: 50px;
 	padding: 0.5em;
@@ -135,7 +174,7 @@ ul li.active a{
 	font-size: 18px;
 	font-weight: lighter;	
 	text-transform: uppercase;
-	
+	box-shadow: 3px 8px 12px #888888;
 }
 
 .confirm a {
@@ -151,3 +190,101 @@ ul li.active a{
 }
 
 
+#about-us .whitebg {
+	background: white;
+	height: 130px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 2fr ;
+	grid-auto-rows: 80vh;
+	grid-gap: 0.7em;
+	background-color: white;
+
+}
+
+.grid > div {
+	text-align: center;
+	color: white;
+	background-color: black;
+	padding: 30px;
+}
+
+.grid > div h1 {
+	padding-top: 30px;
+	font-size: 90px;
+	text-transform: uppercase;
+	letter-spacing: 15px;
+}
+
+.grid > div h2 {
+	padding-top: 70px;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-align: justify;
+	padding-left: 30px;
+	padding-right: 15px;
+}
+
+#contact-us .whitebg {
+	background: white;
+	height: 130px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 2fr ;
+	grid-auto-rows: 80vh;
+	grid-gap: 0.3em;
+	background-color: black;
+
+}
+
+.container > div {
+	text-align: center;
+	color: black;
+	background-color: white;
+	padding: 30px;
+}
+
+.container > div h1 {
+	padding-top: 150px;
+	font-size: 60px;
+	text-transform: uppercase;
+	letter-spacing: 15px;
+}
+
+.detail {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /*use for similar column size*/
+	grid-auto-rows: minmax(35px, auto);
+	grid-gap: 1em;
+	position: fixed;
+	background-color: pink;
+}
+
+.detail {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /*use for similar column size*/
+	grid-gap: 1em;
+	position: fixed;
+	background-color: pink;
+}
+
+.detail li {
+	border: #333 1px solid;
+	padding: 0.3em;
+	list-style-type: none; /*to delete bullet point*/
+	text-align: center;
+}
+
+ul li {
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+	transition: 0.6s ease;
+	text-transform: uppercase;
+	letter-spacing: 6PX;
+}
